@@ -1,5 +1,3 @@
-// document.querySelector("h1").textContent = "MAX";
-
 var myImage = document.querySelector("img");
 
 myImage.onclick = function () {
