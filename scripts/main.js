@@ -28,6 +28,9 @@ if (!localStorage.getItem("name")) {
 myButton.onclick = function () {
   setUserName();
 };
+
+// -----------------------------------------
+
 const button = document.querySelector("button");
 
 button.addEventListener("click", updateName);
