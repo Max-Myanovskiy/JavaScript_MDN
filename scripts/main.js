@@ -5,4 +5,5 @@ button.onclick = function () {
   alert("Привет " + name + ", рады вас видеть !");
 };
 
-// const list = document.appendChild("ul");
+// list = document.createElement("ul");
+// document.body.appendChild(list);
