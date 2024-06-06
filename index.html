@@ -25,7 +25,8 @@
         width: 150px;
       }
 
-      p {
+      .story,
+      .weather {
         background: #ffc125;
         color: #5e2612;
         padding: 10px;
@@ -35,20 +36,52 @@
   </head>
 
   <body>
-    <div>
-      <label for="customname">Enter custom name:</label>
-      <input id="customname" type="text" placeholder="" />
+    <!-- <div>
+      <div>
+        <label for="customname">Enter custom name:</label>
+        <input id="customname" type="text" placeholder="" />
+      </div>
+      <div>
+        <label for="us">US</label
+        ><input id="us" type="radio" name="ukus" value="us" checked />
+        <label for="uk">UK</label
+        ><input id="uk" type="radio" name="ukus" value="uk" />
+      </div>
+      <div>
+        <button class="randomize">Generate random story</button>
+      </div>
+      <p class="story"></p>
     </div>
     <div>
-      <label for="us">US</label
-      ><input id="us" type="radio" name="ukus" value="us" checked />
-      <label for="uk">UK</label
-      ><input id="uk" type="radio" name="ukus" value="uk" />
+      <label for="weather">Выберите тип погоды сегодня: </label>
+      <select id="weather">
+        <option value="">--Сделайте выбор--</option>
+        <option value="sunny">Солнечно</option>
+        <option value="rainy">Дождливо</option>
+        <option value="snowing">Снежно</option>
+        <option value="overcast">Облачно</option>
+      </select>
+      <p class="weather"></p>
     </div>
     <div>
-      <button class="randomize">Generate random story</button>
+      <label for="theme">Выберите тему: </label>
+      <select id="theme">
+        <option value="white">Белая</option>
+        <option value="black">Чёрная</option>
+      </select>
+
+      <h1>Это мой веб-сайт</h1>
+    </div> -->
+    <!-- <div>
+      <label for="search">Поиск по имени: </label>
+      <input id="search" type="text" />
+      <button>Поиск</button>
+
+      <p></p>
     </div>
-    <p class="story"></p>
+    <div class="output"></div> -->
+    <p class="admitted"></p>
+    <p class="refused"></p>
     <script src="main.js"></script>
   </body>
 </html>
