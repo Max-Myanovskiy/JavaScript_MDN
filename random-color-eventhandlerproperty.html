@@ -19,17 +19,30 @@
         return Math.floor(Math.random() * number);
       }
 
-      function bgChange() {
-        const rndCol =
+      //   function bgChange() {
+      //     const rndCol =
+      //       "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+      //     document.body.style.backgroundColor = rndCol;
+      //   }
+
+      function bgChange(e) {
+        var rndCol =
           "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
-        document.body.style.backgroundColor = rndCol;
+        e.target.style.backgroundColor = rndCol;
+        console.log(e);
       }
+
+      btn.addEventListener("click", bgChange);
 
       //   btn.onclick = bgChange;
       //   btn.onfocus = bgChange;
       //   btn.onblur = bgChange;
       //   btn.ondblclick = bgChange;
-      window.onkeypress = bgChange;
+      //   window.onkeypress = bgChange;
+      //   window.onkeydown = bgChange;
+      //   window.onkeyup = bgChange;
+      //   btn.onmouseover = bgChange;
+      //   btn.onmouseout = bgChange;
     </script>
   </body>
 </html>
