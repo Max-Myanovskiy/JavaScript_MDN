@@ -1,5 +1,9 @@
-const para = document.querySelector("p");
-para.insertAdjacentElement.
+const para = document.createElement("p");
+const body = document.body;
+body.appendChild(para);
+const h1 = document.querySelector("h1");
+h1.insertAdjacentElement("beforebegin", "para");
+
 var ballCount = 0;
 
 // setup canvas
