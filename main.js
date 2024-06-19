@@ -1,10 +1,6 @@
-const para = document.createElement("p");
-const body = document.body;
-body.appendChild(para);
-const h1 = document.querySelector("h1");
-h1.insertAdjacentElement("beforebegin", "para");
+const para = document.querySelector("p");
 
-var ballCount = 0;
+let ballCount = 0;
 
 // setup canvas
 
@@ -90,7 +86,7 @@ class EvilCircle extends Shape {
     super(x, y, 20, 20, exists);
 
     this.color = "white";
-    this.size = 10;
+    this.size = 30;
   }
   draw() {
     ctx.beginPath();
@@ -99,7 +95,7 @@ class EvilCircle extends Shape {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
-  update() {
+  checkBounds() {
     if (this.x + this.size >= width) {
       this.x -= this.size;
     }
@@ -119,13 +115,13 @@ class EvilCircle extends Shape {
   setControls() {
     var _this = this;
     window.onkeydown = function (e) {
-      if (e.keyCode === 65) {
+      if (e.keyCode === 65 || e.keyCode === 37) {
         _this.x -= _this.velX;
-      } else if (e.keyCode === 68) {
+      } else if (e.keyCode === 68 || e.keyCode === 39) {
         _this.x += _this.velX;
-      } else if (e.keyCode === 87) {
+      } else if (e.keyCode === 87 || e.keyCode === 38) {
         _this.y -= _this.velY;
-      } else if (e.keyCode === 83) {
+      } else if (e.keyCode === 83 || e.keyCode === 40) {
         _this.y += _this.velY;
       }
     };
