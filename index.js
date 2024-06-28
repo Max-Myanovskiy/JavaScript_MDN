@@ -6,3 +6,8 @@ const submitBtn = document.querySelector("#submitname");
 const forgetBtn = document.querySelector("#forgetname");
 const h1 = document.querySelector("h1");
 const personalGreeting = document.querySelector(".personal-greeting");
+
+// Stop the form from submitting when a button is pressed
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
