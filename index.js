@@ -28,4 +28,23 @@ window.onload = function () {
 
   // Выполните функцию displayData() для отображения тех заметок, которые уже находятся в IDB
   displayData();
+
+  // Настройка таблиц баз данных, если это ещё не было сделано
+  request.onupgradeneeded = function (e) {
+    // Захват ссылки на открытую базу данных
+    let db = e.target.result;
+
+    // Создайте objectStore, где мы сможем хранить заметки (фактически как единая таблица)
+    // включая автоматически увеличивающееся значение ключа
+    let objectStore = db.createObjectStore("notes", {
+      keyPath: "id",
+      autoIncrement: true,
+    });
+
+    // Обозначьте, какие элементы данных будет содержать objectStore
+    objectStore.createIndex("title", "title", { unique: false });
+    objectStore.createIndex("body", "body", { unique: false });
+
+    console.log("Database setup complete");
+  };
 };
